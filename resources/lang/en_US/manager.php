@@ -265,7 +265,7 @@ return  [
       'subtitle'     => 'List',
       'instructions' => 'Staff members list',
       'empty_title'  => 'There are no staff members',
-      'empty_text' 	 => 'Start by adding a new service',
+      'empty_text' 	 => 'Start by adding a new staff member',
     ],
     'show' => [
       'title'        => 'Staff Member',
@@ -343,7 +343,7 @@ return  [
     'index' => [
       'instructions' => 'Add as many services as you provide to configure availability for each of them.',
       'title'        => 'Services',
-      'empty_title'  => 'There are no staff members',
+      'empty_title'  => 'There are no services',
       'empty_text' 	 => 'Start by adding a new service',
     ],
     'msg' => [
