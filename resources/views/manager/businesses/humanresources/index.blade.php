@@ -4,8 +4,29 @@
 @section('subtitle', trans('manager.humanresource.index.subtitle'))
 
 @section('content')
+<style>
+	.message {
+		text-align: center;
+		padding: 50px 0;
+	}
+	.message svg {
+		opacity: 0.2;
+		width: 80px;
+	}
+	.message svg path {
+		fill : #3c8dbc;
+	}
+</style>
 <div class="container-fluid">
     <div class="col-md-6 col-md-offset-3">
+
+		@if (!empty($business->humanresources))
+			<div class="message">
+				@include('svg.staff_empty')
+				<h2>{{ trans('manager.humanresource.index.empty_title') }}</h2>
+				<p>{{ trans('manager.humanresource.index.empty_text') }}</p>
+			</div>
+		@endif
 
         {!! Alert::info(trans('manager.humanresource.index.instructions')) !!}
 

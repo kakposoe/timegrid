@@ -264,6 +264,8 @@ return  [
       'title'        => 'Staff Members',
       'subtitle'     => 'List',
       'instructions' => 'Staff members list',
+      'empty_title'  => 'There are no staff members',
+      'empty_text' 	 => 'Start by adding a new service',
     ],
     'show' => [
       'title'        => 'Staff Member',

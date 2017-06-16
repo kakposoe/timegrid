@@ -4,11 +4,31 @@
 @section('subtitle', trans('manager.services.index.instructions'))
 
 @section('content')
+<style>
+	.message {
+		text-align: center;
+		padding: 50px 0;
+	}
+	.message svg {
+		opacity: 0.2;
+		width: 80px;
+	}
+	.message svg path {
+		fill : #3c8dbc;
+	}
+</style>
 <div class="container-fluid">
     <div class="col-md-6 col-md-offset-3">
 
-        <div class="panel panel-default">
+		@if (!empty($business->services))
+			<div class="message">
+				@include('svg.calendar_empty')
+				<h2>There are no services</h2>
+				<p>Start by adding a new service</p>
+			</div>
+		@endif
 
+        <div class="panel panel-default">
             <div class="panel-body">
 
                 @foreach ($business->services as $service)
