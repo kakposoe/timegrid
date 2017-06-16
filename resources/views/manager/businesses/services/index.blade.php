@@ -20,11 +20,11 @@
 <div class="container-fluid">
     <div class="col-md-6 col-md-offset-3">
 
-		@if (!empty($business->services))
+		@if (!$business->services)
 			<div class="message">
 				@include('svg.calendar_empty')
-				<h2>There are no services</h2>
-				<p>Start by adding a new service</p>
+				<h2>{{ trans('manager.services.index.empty_title') }}</h2>
+				<p>{{ trans('manager.services.index.empty_text') }}</p>
 			</div>
 		@endif
 

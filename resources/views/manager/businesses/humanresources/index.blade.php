@@ -20,7 +20,7 @@
 <div class="container-fluid">
     <div class="col-md-6 col-md-offset-3">
 
-		@if (!empty($business->humanresources))
+		@if (!$business->humanresources)
 			<div class="message">
 				@include('svg.staff_empty')
 				<h2>{{ trans('manager.humanresource.index.empty_title') }}</h2>
